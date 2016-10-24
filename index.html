@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="{{ lang }}" ng-app="Multilingual">
+<html lang="{{ lang }}" ng-app="multilingual">
 <head>
   <title>Multilingual AngularJS</title>
   <meta charset="utf-8">
-  <link ng-href="css/{{ default_direction }}-app.css" rel="stylesheet">
+  <link ng-href="dist/css/{{ default_direction }}-app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,6 +19,6 @@
     <button ng-show="lang == 'ar'" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
   </div>
 
-  <script src="js/app.min.js"></script>
+  <script src="dist/js/app.min.js"></script>
 </body>
 </html>

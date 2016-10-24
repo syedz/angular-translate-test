@@ -9,24 +9,26 @@ var browserSync  = require('browser-sync');
 
 gulp.task('js', function(){
   return gulp.src([
-    './bower_components/angular/angular.js',
-    './bower_components/angular-translate/angular-translate.js',
-    './bower_components/angular-translate-handler-log/angular-translate-handler-log.js',
-    './bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-    './bower_components/angular-cookies/angular-cookies.js',
-    './bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
-    './bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
+      './bower_components/angular/angular.js',
+      './bower_components/angular-translate/angular-translate.js',
+      './bower_components/angular-translate-handler-log/angular-translate-handler-log.js',
+      './bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      './bower_components/angular-cookies/angular-cookies.js',
+      './bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+      './bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
 
-    './js/app.js'])
+      './js/app.module.js',
+      './js/app.controller.js'
+    ])
     .pipe(concat('app.min.js'))
     // .pipe(uglify())
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('sass', function () {
   return gulp.src(['./sass/ltr-app.scss', './sass/rtl-app.scss'])
     .pipe(sass())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('serve', function() {
