@@ -5,12 +5,6 @@ angular
   ])
   .config(function($translateProvider){
     $translateProvider
-      // .translations('ar', {
-      //   'HELLO': 'مرحبا'
-      // })
-      // .translations('en', {
-      //   'HELLO': 'Hello'
-      // })
       .useStaticFilesLoader({
         prefix: '/translations/locale-',
         suffix: '.json'
