@@ -3,6 +3,8 @@
 ### Bower ###
 bower_components
 node_modules
+css
+js
 .bower-cache
 .bower-registry
 .bower-tmp

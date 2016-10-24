@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="{{ lang }}" ng-app="Multilingual">
+<head>
+  <title>Multilingual AngularJS</title>
+  <meta charset="utf-8">
+  <link ng-href="css/{{ default_direction }}-app.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- User will see the below before it renders -->
+  <!-- <h2>{{ 'HELLO' | translate }}</h2> -->
+  <h2 translate="HELLO"></h2>
+
+  <div class="text-{{ default_float }}"></div>
+
+  <div ng-controller="LanguageSwitchController">
+    <button ng-show="lang == 'en'" ng-click="changeLanguage('ar')" translate="BUTTON_LANG_AR"></button>
+    <button ng-show="lang == 'ar'" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
+  </div>
+
+  <script src="js/app.min.js"></script>
+</body>
+</html>
